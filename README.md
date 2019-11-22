@@ -21,4 +21,5 @@ ___
 `$ python bikeshare.py`
 ___
 ### Credits
-[The documentation link that helps me perform DataFrame mode calculation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html#pandas.DataFrame.mode)
+- [The documentation link that helps me perform DataFrame mode calculation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html#pandas.DataFrame.mode)
+- [Python downloads and documentation](https://www.python.org/downloads/)
