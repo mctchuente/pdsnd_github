@@ -16,47 +16,43 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     # display welcome message to the user
+    months = ['january','february','march','april','may','june']
+	days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
 	print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input('\nWould you like to see data for Chicago, New York City, or Washington?\nPlease enter your choice...\n\n')
-        city = city.lower()
+        city = input('\nWould you like to see data for Chicago, New York City, or Washington?\nPlease enter your choice...\n\n').lower()
         if city in ['chicago','new york city','washington']:
             break
     # get input for filters
     while True:
-        filter = input('\nWould you like to filter the data by month, day, both, or not at all?\nPlease enter your choice..."all" for "not at all"\n\n')
-        filter = filter.lower()
+        filter = input('\nWould you like to filter the data by month, day, both, or not at all?\nPlease enter your choice..."all" for "not at all"\n\n').lower()
         if filter in ['all','both','month','day']:
             break
     if filter == 'both':
         # get user input for month (all, january, february, ... , june)
         while True:
-            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n')
-            month = month.lower()
-            if month in ['january','february','march','april','may','june']:
+            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n').lower()
+            if month in months:
                 break
         # get user input for day of week (all, monday, tuesday, ... sunday)
         while True:
-            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n')
-            day = day.lower()
-            if day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']:
+            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n').lower()
+            if day in days:
                 break
     elif filter == 'month':
         day = 'all'
         # get user input for month (all, january, february, ... , june)
         while True:
-            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n')
-            month = month.lower()
-            if month in ['january','february','march','april','may','june']:
+            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n').lower()
+            if month in months:
                 break
     elif filter == 'day':
         month = 'all'
         # get user input for day of week (all, monday, tuesday, ... sunday)
         while True:
-            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n')
-            day = day.lower()
-            if day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']:
+            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n').lower()
+            if day in days:
                 break
     else:
         month = 'all'
