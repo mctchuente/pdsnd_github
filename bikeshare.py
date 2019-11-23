@@ -23,37 +23,32 @@ def get_filters():
             break
     # get input for filters
     while True:
-        filter = input('\nWould you like to filter the data by month, day, both, or not at all?\nPlease enter your choice..."all" for "not at all"\n\n')
-        filter = filter.lower()
+        filter = input('\nWould you like to filter the data by month, day, both, or not at all?\nPlease enter your choice..."all" for "not at all"\n\n').lower()
         if filter in ['all','both','month','day']:
             break
     if filter == 'both':
         # get user input for month (all, january, february, ... , june)
         while True:
-            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n')
-            month = month.lower()
+            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n').lower()
             if month in ['january','february','march','april','may','june']:
                 break
         # get user input for day of week (all, monday, tuesday, ... sunday)
         while True:
-            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n')
-            day = day.lower()
+            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n').lower()
             if day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']:
                 break
     elif filter == 'month':
         day = 'all'
         # get user input for month (all, january, february, ... , june)
         while True:
-            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n')
-            month = month.lower()
+            month = input('\nWhich month - January, February, March, April, May, or June?\nPlease enter your choice...\n\n').lower()
             if month in ['january','february','march','april','may','june']:
                 break
     elif filter == 'day':
         month = 'all'
         # get user input for day of week (all, monday, tuesday, ... sunday)
         while True:
-            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n')
-            day = day.lower()
+            day = input('\nWhich day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter your choice...\n\n').lower()
             if day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']:
                 break
     else:
